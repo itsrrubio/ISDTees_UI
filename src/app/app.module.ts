@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 
 //services
 import { ProductService } from './product.service';
+import { AppRouterModule } from './app-router.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductService } from './product.service';
     HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouterModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
