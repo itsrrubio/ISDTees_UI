@@ -5,12 +5,12 @@
             <input matInput placeholder="Brand Name" formControlName="brandName">
         </mat-form-field>
         <mat-form-field class="new-product-field" >
-            <input matInput placeholder="color Name" formControlName="colorName">
+            <input matInput placeholder="Color Name" formControlName="colorName">
         </mat-form-field>
         <mat-form-field class="new-product-field" >
             <input matInput placeholder="Style Name" formControlName="styleName">
         </mat-form-field>
 
-        <button mat-raised-button disabled="!productForm.valid">Create new</button>
+        <button mat-raised-button [disabled]="!productForm.valid">Create new</button>
     </form>
 </mat-card>

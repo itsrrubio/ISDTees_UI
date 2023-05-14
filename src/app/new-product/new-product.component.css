@@ -1,11 +1,12 @@
 .new-product-form {
+    /* width: 80% */
     margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 5%;
 }
 
-.new_product-field {
+.new-product-field {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;

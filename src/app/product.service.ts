@@ -13,4 +13,8 @@ export class ProductService {
   getAll(){
     return this.http.get(this.baseUrl);
   }
+
+  createProduct(product){
+    return this.http.post(this.baseUrl, product);
+  }
 }

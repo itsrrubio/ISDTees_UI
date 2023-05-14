@@ -17,6 +17,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog';
 import { NewProductComponent } from './new-product/new-product.component';
 
 //forms
@@ -34,7 +36,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     //The import below is for Material Design
-    BrowserAnimationsModule, MatButtonModule, MatTableModule, MatInputModule, 
+    BrowserAnimationsModule, MatButtonModule, MatTableModule, 
+    MatInputModule, MatToolbarModule, MatDialogModule,
     MatCardModule, 
     MatSelectModule,
     ReactiveFormsModule,

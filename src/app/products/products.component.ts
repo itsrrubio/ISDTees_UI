@@ -10,7 +10,7 @@ import { ProductElement } from '../interfaces/ProductElement';
 })
 export class ProductsComponent implements OnInit {
 
-  displayedColumns: string[] = ['brandName','colorName','styleName']
+  displayedColumns: string[] = ['brandName','colorName','styleName','Actions']
   //I was getting this error: Member 'dataSource' implicitly has an 'any' type.
   //I fixed it by adding  noImplicitAny": false in the tsconfig.json file.
   //Solution found in: https://stackoverflow.com/questions/37032857/error-ts7008-member-summary-implicitly-has-an-any-type
@@ -22,5 +22,9 @@ export class ProductsComponent implements OnInit {
       console.log('Result - ' , data);
       this.dataSource = new MatTableDataSource<ProductElement>(data as ProductElement[]);
     })
+  }
+
+  updateProduct(product){
+    console.log(product);
   }
 }
