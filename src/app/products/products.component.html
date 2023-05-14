@@ -1,1 +1,19 @@
-<p>This is the products section!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="brandName">
+        <th mat-header-cell *matHeaderCellDef> Brand Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.brandName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="colorName">
+          <th mat-header-cell *matHeaderCellDef> Color Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.colorName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="styleName">
+          <th mat-header-cell *matHeaderCellDef> Style Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.styleName}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
