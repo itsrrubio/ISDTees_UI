@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormGroup, FormControl} from '@angular/forms';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-new-product',
@@ -9,8 +9,12 @@ import {FormGroup, FormControl} from '@angular/forms';
 export class NewProductComponent {
   constructor()  {}
   productForm = new FormGroup({
-    brandName: new FormControl(''),
-    colorName: new FormControl(''),
-    styleName: new FormControl('')
+    brandName: new FormControl('', Validators.required),
+    colorName: new FormControl('', Validators.required),
+    styleName: new FormControl('', Validators.required)
   })
+
+  onSubmit(){
+    console.log(this.productForm.value);
+  }
 }

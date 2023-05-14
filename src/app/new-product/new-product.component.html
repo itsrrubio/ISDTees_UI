@@ -1,16 +1,16 @@
 <mat-card>
     <span>Create new product</span>
-    <form [formGroup]="productForm">
-        <mat-form-field>
-            <input matInput placeholder="Brand Name">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-product-field" >
+            <input matInput placeholder="Brand Name" formControlName="brandName">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="color Name">
+        <mat-form-field class="new-product-field" >
+            <input matInput placeholder="color Name" formControlName="colorName">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Style Name">
+        <mat-form-field class="new-product-field" >
+            <input matInput placeholder="Style Name" formControlName="styleName">
         </mat-form-field>
 
-        <button mat-raised-button>Create new</button>
+        <button mat-raised-button disabled="!productForm.valid">Create new</button>
     </form>
 </mat-card>
