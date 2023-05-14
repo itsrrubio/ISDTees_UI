@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Update entry</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="new-product-field" >
+        <input matInput placeholder="Brand Name" formControlName="brandName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-product-field" >
+        <input matInput placeholder="Color Name" formControlName="colorName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-product-field" >
+        <input matInput placeholder="Style Name" formControlName="styleName">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

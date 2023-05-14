@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductElement } from '../interfaces/ProductElement';
+import { MatDialog } from '@angular/material/dialog';
+import { UpdateProductComponent } from '../update-product/update-product.component';
 
 @Component({
   selector: 'app-products',
@@ -16,7 +18,9 @@ export class ProductsComponent implements OnInit {
   //Solution found in: https://stackoverflow.com/questions/37032857/error-ts7008-member-summary-implicitly-has-an-any-type
   dataSource;
 
-  constructor(private service:ProductService){}
+  constructor(private service:ProductService, 
+              private dialog:MatDialog){ }
+
   ngOnInit() {
     this.service.getAll().subscribe((data) => {
       console.log('Result - ' , data);
@@ -26,5 +30,12 @@ export class ProductsComponent implements OnInit {
 
   updateProduct(product){
     console.log(product);
+    this.dialog.open(UpdateProductComponent, {
+      data: {
+        BrandName: product.brandName,
+        ColorName: product.colorName,
+        StyleName: product.styleName
+      }
+    })
   }
 }

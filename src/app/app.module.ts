@@ -23,6 +23,7 @@ import { NewProductComponent } from './new-product/new-product.component';
 
 //forms
 import {ReactiveFormsModule} from '@angular/forms';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -30,19 +31,22 @@ import {ReactiveFormsModule} from '@angular/forms';
     ProductsComponent,
     FooterComponent,
     HeaderComponent,
-    NewProductComponent
+    NewProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     //The import below is for Material Design
     BrowserAnimationsModule, MatButtonModule, MatTableModule, 
-    MatInputModule, MatToolbarModule, MatDialogModule,
+    MatInputModule, MatToolbarModule, 
     MatCardModule, 
     MatSelectModule,
     ReactiveFormsModule,
+    MatDialogModule,
     AppRouterModule
   ],
+ // productComponents:[UpdateProductComponent],
   providers: [ProductService],
   bootstrap: [AppComponent]
 })
