@@ -19,11 +19,13 @@ import { MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatListModule} from '@angular/material/list';
 import { NewProductComponent } from './new-product/new-product.component';
 
 //forms
 import {ReactiveFormsModule} from '@angular/forms';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     FooterComponent,
     HeaderComponent,
     NewProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    DeleteProductComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +45,9 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     MatInputModule, MatToolbarModule, 
     MatCardModule, 
     MatSelectModule,
-    ReactiveFormsModule,
     MatDialogModule,
+    MatListModule,
+    ReactiveFormsModule,
     AppRouterModule
   ],
  // productComponents:[UpdateProductComponent],

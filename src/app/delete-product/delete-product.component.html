@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Are you sure you want to delete this product?</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item>
+                <b>Description: </b> {{product.brandName}}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <b>Value: </b> {{product.colorName}}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <b>Value: </b> {{product.styleName}}
+            </mat-list-item>
+            <mat-divider></mat-divider>            
+        </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button (click)="cancel()">Cancel</button>
+        <button mat-raised-button color="warn" (click)="confirm()">Confirm</button>
+    </mat-card-actions>    
+</mat-card>

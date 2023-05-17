@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-update-product',
@@ -14,7 +15,8 @@ export class UpdateProductComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private dialogRef: MatDialogRef<UpdateProductComponent>,
-              @Inject(MAT_DIALOG_DATA){BrandName, ColorName, StyleName, Id}) {
+              @Inject(MAT_DIALOG_DATA){BrandName, ColorName, StyleName, Id},
+              private service:ProductService) {
                 this.id = Id;
 
                 this.form = fb.group({
@@ -25,12 +27,19 @@ export class UpdateProductComponent implements OnInit {
               }
 
   close(){
-    console.log("close clicked");
+    //console.log("close clicked");
+    this.dialogRef.close();
   }
 
   save(){
-    console.log("save clicked");    
+    //console.log("save clicked"); 
+    this.form.value.id = this.id;
+    this.service.updateProduct(this.id, this.form.value).subscribe((data)=> {
+      console.log('Data: ', data);
+    })
   }
+
+
 
   ngOnInit() {
 

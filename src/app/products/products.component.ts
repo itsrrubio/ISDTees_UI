@@ -32,6 +32,7 @@ export class ProductsComponent implements OnInit {
     console.log(product);
     this.dialog.open(UpdateProductComponent, {
       data: {
+        Id: product.Id,
         BrandName: product.brandName,
         ColorName: product.colorName,
         StyleName: product.styleName
