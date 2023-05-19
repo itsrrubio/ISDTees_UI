@@ -26,6 +26,12 @@ import { NewProductComponent } from './new-product/new-product.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { ConfigsComponent } from './configs/configs.component';
+import { CustomersComponent } from './customers/customers.component';
+import { LineitemsComponent } from './lineitems/lineitems.component';
+import { OrdersComponent } from './orders/orders.component';
+import { SpecsComponent } from './specs/specs.component';
+import { StylesComponent } from './styles/styles.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,13 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
     HeaderComponent,
     NewProductComponent,
     UpdateProductComponent,
-    DeleteProductComponent
+    DeleteProductComponent,
+    ConfigsComponent,
+    CustomersComponent,
+    LineitemsComponent,
+    OrdersComponent,
+    SpecsComponent,
+    StylesComponent
   ],
   imports: [
     BrowserModule,
