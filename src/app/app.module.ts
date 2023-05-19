@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 //services
 import { ProductService } from './product.service';
 import { AppRouterModule } from './app-router.module';
-import {HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 //This was imported when Material Design was installed
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule } from '@angular/material/button';
