@@ -1,0 +1,16 @@
+<mat-card>
+    <span>Create new configuration</span>
+    <form [formGroup]="configForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-config-field" >
+            <input matInput placeholder="Config Name" formControlName="configName">
+        </mat-form-field>
+        <mat-form-field class="new-config-field" >
+            <input matInput placeholder="Config value" formControlName="configValue">
+        </mat-form-field>
+        <mat-form-field class="new-config-field" >
+            <input matInput placeholder="Config description" formControlName="configDescription">
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="!configForm.valid">Create new</button>
+    </form>
+</mat-card>

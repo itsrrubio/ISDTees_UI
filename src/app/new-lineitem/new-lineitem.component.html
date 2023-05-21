@@ -1,0 +1,31 @@
+<mat-card>
+    <span>Create new line item</span>
+    <form [formGroup]="lineitemForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="LineItem ID" formControlName="LineItemID">
+        </mat-form-field>
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="Product ID" formControlName="productID">
+        </mat-form-field>
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="Description" formControlName="description">
+        </mat-form-field>
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="Price" formControlName="price">
+        </mat-form-field>
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="order ID" formControlName="orderID">
+        </mat-form-field>
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="Quantity" formControlName="quantity">
+        </mat-form-field>
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="order_Id" formControlName="order_Id">
+        </mat-form-field>
+        <mat-form-field class="new-lineitem-field" >
+            <input matInput placeholder="product_Id" formControlName="product_Id">
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="!lineitemForm.valid">Create new</button>
+    </form>
+</mat-card>

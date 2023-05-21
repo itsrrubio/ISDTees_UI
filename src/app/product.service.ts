@@ -37,9 +37,17 @@ export class ProductService {
     return this.http.get(this.baseUrl2+'/customers');
   }
 
+  createCustomer(customer){
+    return this.http.post(this.baseUrl2, customer);
+  }
+
   //CONFIG METHODS
   getAllConfigs(){
     return this.http.get(this.baseUrl2+'/configs');
+  }
+
+  createConfig(config){
+    return this.http.post(this.baseUrl2+'/configs', config);
   }
 
   //ORDER METHODS
@@ -47,9 +55,17 @@ export class ProductService {
     return this.http.get(this.baseUrl2+'/orders');
   }
 
+  createOrder(order){
+    return this.http.post(this.baseUrl2+'/orders', order);
+  }
+
   //LINE ITEM METHODS
   getAllLineitems(){
     return this.http.get(this.baseUrl2+'/lineitems');
+  }
+
+  createLineitem(lineitem){
+    return this.http.post(this.baseUrl2+'/lineitems', lineitem);
   }
 
   //SPECS METHODS
@@ -57,8 +73,17 @@ export class ProductService {
     return this.http.get(this.baseUrl2+'/specs');
   }
 
+  createSpec(spec){
+    return this.http.post(this.baseUrl2+'/specs', spec);
+  }
+
+
   //STYLE METHODS
   getAllStyles(){
     return this.http.get(this.baseUrl2+'/styles');
+  }
+
+  createStyle(style){
+    return this.http.post(this.baseUrl2+'/styles', style);
   }
 }

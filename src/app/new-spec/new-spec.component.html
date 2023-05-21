@@ -1,0 +1,25 @@
+<mat-card>
+    <span>Create new specification</span>
+    <form [formGroup]="specForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-spec-field" >
+            <input matInput placeholder="Spec ID" formControlName="specID">
+        </mat-form-field>
+        <mat-form-field class="new-spec-field" >
+            <input matInput placeholder="Size Name" formControlName="sizeName">
+        </mat-form-field>
+        <mat-form-field class="new-spec-field" >
+            <input matInput placeholder="Size Order" formControlName="sizeOrder">
+        </mat-form-field>
+        <mat-form-field class="new-spec-field" >
+            <input matInput placeholder="Spec Name" formControlName="specName">
+        </mat-form-field>
+        <mat-form-field class="new-spec-field" >
+            <input matInput placeholder="Value" formControlName="value">
+        </mat-form-field>
+        <mat-form-field class="new-spec-field" >
+            <input matInput placeholder="Style ID" formControlName="styleID">
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="!specForm.valid">Create new</button>
+    </form>
+</mat-card>

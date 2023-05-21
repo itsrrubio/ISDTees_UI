@@ -1,0 +1,34 @@
+<mat-card>
+    <span>Create new style</span>
+    <form [formGroup]="styleForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="StyleID" formControlName="styleID">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Part Number" formControlName="partNumber">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Brand Name" formControlName="brandName">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Style Name" formControlName="styleName">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Unique Style Name" formControlName="uniquestyleName">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Title" formControlName="title">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Base Category" formControlName="baseCategory">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Comparable Group" formControlName="comparableGroup">
+        </mat-form-field>
+        <mat-form-field class="new-style-field" >
+            <input matInput placeholder="Companion Group" formControlName="companionGroup">
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="!styleForm.valid">Create new</button>
+    </form>
+</mat-card>

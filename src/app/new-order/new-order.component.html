@@ -1,0 +1,37 @@
+<mat-card>
+    <span>Create new order</span>
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Order No" formControlName="orderNo">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Order Name" formControlName="orderName">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Customer ID" formControlName="customerID">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Contact Name" formControlName="contactName">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Order Date" formControlName="orderDate">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Order Notes" formControlName="orderNotes">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Sub Total" formControlName="subTotal">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Tax" formControlName="tax">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="Total" formControlName="total">
+        </mat-form-field>
+        <mat-form-field class="new-order-field" >
+            <input matInput placeholder="customer_Id" formControlName="customer_Id">
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="!orderForm.valid">Create new</button>
+    </form>
+</mat-card>

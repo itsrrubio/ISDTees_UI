@@ -32,6 +32,12 @@ import { LineitemsComponent } from './lineitems/lineitems.component';
 import { OrdersComponent } from './orders/orders.component';
 import { SpecsComponent } from './specs/specs.component';
 import { StylesComponent } from './styles/styles.component';
+import { NewConfigComponent } from './new-config/new-config.component';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { NewLineitemComponent } from './new-lineitem/new-lineitem.component';
+import { NewOrderComponent } from './new-order/new-order.component';
+import { NewSpecComponent } from './new-spec/new-spec.component';
+import { NewStyleComponent } from './new-style/new-style.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +53,13 @@ import { StylesComponent } from './styles/styles.component';
     LineitemsComponent,
     OrdersComponent,
     SpecsComponent,
-    StylesComponent
+    StylesComponent,
+    NewConfigComponent,
+    NewCustomerComponent,
+    NewLineitemComponent,
+    NewOrderComponent,
+    NewSpecComponent,
+    NewStyleComponent
   ],
   imports: [
     BrowserModule,
