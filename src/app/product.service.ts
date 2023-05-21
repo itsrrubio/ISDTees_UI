@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class ProductService {
 
   baseUrl: string = 'http://localhost:64653/api/products'
+  baseUrl2: string = 'http://localhost:64653/api'
 
   constructor(private http: HttpClient) { }
 
@@ -16,6 +17,10 @@ export class ProductService {
 
   getAll(){
     return this.http.get(this.baseUrl);
+  }
+
+  getAllCustomers(){
+    return this.http.get(this.baseUrl2+'/customers');
   }
 
   createProduct(product){

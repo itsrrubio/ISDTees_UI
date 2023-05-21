@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
               private dialog:MatDialog){ }
 
   ngOnInit() {
-    this.service.getAll().subscribe((data) => {
+      this.service.getAll().subscribe((data) => {
       console.log('Result - ' , data);
       this.dataSource = new MatTableDataSource<ProductElement>(data as ProductElement[]);
     })
