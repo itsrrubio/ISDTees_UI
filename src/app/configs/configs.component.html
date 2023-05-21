@@ -1,1 +1,17 @@
-<p>configs works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="ConfigName">
+        <th mat-header-cell *matHeaderCellDef> Config Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.ConfigName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="ConfigValue">
+        <th mat-header-cell *matHeaderCellDef> Config Value </th>
+        <td mat-cell *matCellDef="let element"> {{element.ConfigValue}} </td>
+    </ng-container>
+    <ng-container matColumnDef="ConfigDescription">
+        <th mat-header-cell *matHeaderCellDef> Config Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.ConfigDescription}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

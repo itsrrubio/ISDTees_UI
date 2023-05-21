@@ -1,1 +1,42 @@
-<p>styles works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="StyleID">
+        <th mat-header-cell *matHeaderCellDef> Style ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.StyleID}} </td>
+    </ng-container>
+    <ng-container matColumnDef="PartNumber">
+        <th mat-header-cell *matHeaderCellDef> Part Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.PartNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="BrandName">
+        <th mat-header-cell *matHeaderCellDef> Brand Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.BrandName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="StyleName">
+        <th mat-header-cell *matHeaderCellDef> Style Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.StyleName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="UniquestyleName">
+        <th mat-header-cell *matHeaderCellDef> Unique Style Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.UniquestyleName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.Title}} </td>
+    </ng-container>
+    <ng-container matColumnDef="BaseCategory">
+        <th mat-header-cell *matHeaderCellDef> BaseCategory </th>
+        <td mat-cell *matCellDef="let element"> {{element.BaseCategory}} </td>
+    </ng-container>
+    <ng-container matColumnDef="ComparableGroup">
+        <th mat-header-cell *matHeaderCellDef> Comparable Group </th>
+        <td mat-cell *matCellDef="let element"> {{element.ComparableGroup}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="CompanionGroup">
+        <th mat-header-cell *matHeaderCellDef> Companion Group </th>
+        <td mat-cell *matCellDef="let element"> {{element.CompanionGroup}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

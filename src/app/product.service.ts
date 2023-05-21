@@ -11,16 +11,13 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
+   //PRODUCT METHODS
   getProduct(id){
       return this.http.get(this.baseUrl+'/'+id);
   }
 
   getAll(){
     return this.http.get(this.baseUrl);
-  }
-
-  getAllCustomers(){
-    return this.http.get(this.baseUrl2+'/customers');
   }
 
   createProduct(product){
@@ -33,5 +30,35 @@ export class ProductService {
 
   deleteProduct(id){
     return this.http.delete(this.baseUrl+'/'+id);
+  }
+
+  //CUSTOMER METHODS
+  getAllCustomers(){
+    return this.http.get(this.baseUrl2+'/customers');
+  }
+
+  //CONFIG METHODS
+  getAllConfigs(){
+    return this.http.get(this.baseUrl2+'/configs');
+  }
+
+  //ORDER METHODS
+  getAllOrders(){
+    return this.http.get(this.baseUrl2+'/orders');
+  }
+
+  //LINE ITEM METHODS
+  getAllLineitems(){
+    return this.http.get(this.baseUrl2+'/lineitems');
+  }
+
+  //SPECS METHODS
+  getAllSpecs(){
+    return this.http.get(this.baseUrl2+'/specs');
+  }
+
+  //STYLE METHODS
+  getAllStyles(){
+    return this.http.get(this.baseUrl2+'/styles');
   }
 }
