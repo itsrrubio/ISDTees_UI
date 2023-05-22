@@ -38,7 +38,11 @@ export class ProductService {
   }
 
   createCustomer(customer){
-    return this.http.post(this.baseUrl2, customer);
+    return this.http.post(this.baseUrl2+'/customers',  customer);
+  }
+
+  updateCustomer(id, customer){
+    return this.http.put(this.baseUrl2+'/customers'+'/'+id, customer);
   }
 
   //CONFIG METHODS
@@ -50,6 +54,10 @@ export class ProductService {
     return this.http.post(this.baseUrl2+'/configs', config);
   }
 
+  updateConfig(id, config){
+    return this.http.put(this.baseUrl2+'/configs'+'/'+id, config);
+  }
+
   //ORDER METHODS
   getAllOrders(){
     return this.http.get(this.baseUrl2+'/orders');
@@ -57,6 +65,10 @@ export class ProductService {
 
   createOrder(order){
     return this.http.post(this.baseUrl2+'/orders', order);
+  }
+
+  updateOrder(id, order){
+    return this.http.put(this.baseUrl2+'/orders'+'/'+id, order);
   }
 
   //LINE ITEM METHODS
@@ -68,6 +80,10 @@ export class ProductService {
     return this.http.post(this.baseUrl2+'/lineitems', lineitem);
   }
 
+  updateLineitem(id, lineitem){
+    return this.http.put(this.baseUrl2+'/lineitems'+'/'+id, lineitem);
+  }
+
   //SPECS METHODS
   getAllSpecs(){
     return this.http.get(this.baseUrl2+'/specs');
@@ -77,6 +93,9 @@ export class ProductService {
     return this.http.post(this.baseUrl2+'/specs', spec);
   }
 
+  updateSpec(id, spec){
+    return this.http.put(this.baseUrl2+'/specs'+'/'+id, spec);
+  }
 
   //STYLE METHODS
   getAllStyles(){
@@ -85,5 +104,9 @@ export class ProductService {
 
   createStyle(style){
     return this.http.post(this.baseUrl2+'/styles', style);
+  }
+
+  updateStyle(id, style){
+    return this.http.put(this.baseUrl2+'/styles'+'/'+id, style);
   }
 }

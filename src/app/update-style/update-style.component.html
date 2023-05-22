@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Update style</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="StyleID" formControlName="styleID">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Part Number" formControlName="partNumber">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Brand Name" formControlName="brandName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Style Name" formControlName="styleName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Unique Style Name" formControlName="uniquestyleName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Base Category" formControlName="baseCategory">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Comparable Group" formControlName="comparableGroup">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-style-field" >
+        <input matInput placeholder="Companion Group" formControlName="companionGroup">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

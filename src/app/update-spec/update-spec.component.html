@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Update specification</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="new-spec-field" >
+        <input matInput placeholder="Spec ID" formControlName="specID">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-spec-field" >
+        <input matInput placeholder="Size Name" formControlName="sizeName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-spec-field" >
+        <input matInput placeholder="Size Order" formControlName="sizeOrder">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-spec-field" >
+        <input matInput placeholder="Spec Name" formControlName="specName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-spec-field" >
+        <input matInput placeholder="Value" formControlName="value">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-spec-field" >
+        <input matInput placeholder="Style ID" formControlName="styleID">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Update configuration</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="new-config-field" >
+        <input matInput placeholder="Config Name" formControlName="configName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-config-field" >
+        <input matInput placeholder="Config value" formControlName="configValue">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-config-field" >
+        <input matInput placeholder="Config description" formControlName="configDescription">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Update order</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Order No" formControlName="orderNo">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Order Name" formControlName="orderName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Customer ID" formControlName="customerID">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Contact Name" formControlName="contactName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Order Date" formControlName="orderDate">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Order Notes" formControlName="orderNotes">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Sub Total" formControlName="subTotal">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Tax" formControlName="tax">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="Total" formControlName="total">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-order-field" >
+        <input matInput placeholder="customer_Id" formControlName="customer_Id">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

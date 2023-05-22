@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Update line item</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="LineItem ID" formControlName="LineItemID">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="Product ID" formControlName="productID">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="Price" formControlName="price">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="order ID" formControlName="orderID">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="Quantity" formControlName="quantity">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="order_Id" formControlName="order_Id">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="new-lineitem-field" >
+        <input matInput placeholder="product_Id" formControlName="product_Id">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

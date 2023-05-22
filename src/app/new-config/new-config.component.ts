@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup , Validators } from '@angular/forms';
 import { ProductService } from '../product.service';
 
+
 @Component({
   selector: 'app-new-config',
   templateUrl: './new-config.component.html',

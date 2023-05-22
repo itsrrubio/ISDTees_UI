@@ -38,6 +38,12 @@ import { NewLineitemComponent } from './new-lineitem/new-lineitem.component';
 import { NewOrderComponent } from './new-order/new-order.component';
 import { NewSpecComponent } from './new-spec/new-spec.component';
 import { NewStyleComponent } from './new-style/new-style.component';
+import { UpdateConfigComponent } from './update-config/update-config.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { UpdateLineitemComponent } from './update-lineitem/update-lineitem.component';
+import { UpdateOrderComponent } from './update-order/update-order.component';
+import { UpdateSpecComponent } from './update-spec/update-spec.component';
+import { UpdateStyleComponent } from './update-style/update-style.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +65,13 @@ import { NewStyleComponent } from './new-style/new-style.component';
     NewLineitemComponent,
     NewOrderComponent,
     NewSpecComponent,
-    NewStyleComponent
+    NewStyleComponent,
+    UpdateConfigComponent,
+    UpdateCustomerComponent,
+    UpdateLineitemComponent,
+    UpdateOrderComponent,
+    UpdateSpecComponent,
+    UpdateStyleComponent
   ],
   imports: [
     BrowserModule,

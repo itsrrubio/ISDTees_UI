@@ -31,10 +31,17 @@
         <th mat-header-cell *matHeaderCellDef> Comparable Group </th>
         <td mat-cell *matCellDef="let element"> {{element.ComparableGroup}} </td>
     </ng-container>
-
     <ng-container matColumnDef="CompanionGroup">
         <th mat-header-cell *matHeaderCellDef> Companion Group </th>
         <td mat-cell *matCellDef="let element"> {{element.CompanionGroup}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td  mat-cell *matCellDef="let element">
+            <button (click)="updateStyle(element)" mat-raised-button color="primary">
+                <b>Edit</b>
+            </button>
+        </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -19,10 +19,17 @@
         <th mat-header-cell *matHeaderCellDef> Value </th>
         <td mat-cell *matCellDef="let element"> {{element.Salue}} </td>
     </ng-container>
-
     <ng-container matColumnDef="styleID">
         <th mat-header-cell *matHeaderCellDef> Style ID </th>
         <td mat-cell *matCellDef="let element"> {{element.styleID}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td  mat-cell *matCellDef="let element">
+            <button (click)="updateSpec(element)" mat-raised-button color="primary">
+                <b>Edit</b>
+            </button>
+        </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
